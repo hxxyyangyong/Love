@@ -1,0 +1,87 @@
+ [
+  {
+  "resourceId": 69,
+  "resourceType": 4,
+  "levels": 1,
+  "price": 0,
+  "resourceContent": 79985,
+  "smallPicId": 79986,
+  "resourceName": "黄框",
+  "cTime": "Aug 29, 2014 9:57:09 PM",
+  "mTime": "Sep 2, 2014 2:18:53 PM",
+  "remake": "{\n    \"superview\": {\n        \"transform_angle\": \"0\",\n        \"frame\": \"{{0,0},{493,387}}\"\n    },\n    \"subviews\": [\n        {\n            \"transform_angle\": \"-12.23\",\n            \"frame\": \"{{56,65},{366,247}}\"\n        }\n    ]\n}",
+  "status": 1,
+  "level": {
+  "levelName": "LV0",
+  "levels": 0
+  }
+  },
+  {
+  "resourceId": 58,
+  "resourceType": 4,
+  "levels": 2,
+  "price": 0,
+  "resourceContent": 79987,
+  "smallPicId": 79972,
+  "resourceName": "蓝框",
+  "cTime": "Aug 29, 2014 9:57:42 PM",
+  "mTime": "Aug 29, 2014 9:57:42 PM",
+  "remake": "{\n    \"superview\": {\n        \"transform_angle\": \"0\",\n        \"frame\": \"{{0,0},{357,251}}\"\n    },\n    \"subviews\": [\n        {\n            \"transform_angle\": \"-8.68\",\n            \"frame\": \"{{20,53},{156,122}}\"\n        },\n        {\n            \"transform_angle\": \"9.88\",\n            \"frame\": \"{{207,50},{121,170}}\"\n        }\n    ]\n}\n",
+  "status": 1,
+  "level": {
+  "levelName": "LV1",
+  "levels": 1
+  }
+  },
+  {
+  "resourceId": 60,
+  "resourceType": 4,
+  "levels": 3,
+  "price": 0,
+  "resourceContent": 79973,
+  "smallPicId": 79988,
+  "resourceName": "三相框",
+  "cTime": "Aug 29, 2014 9:58:28 PM",
+  "mTime": "Aug 29, 2014 9:58:28 PM",
+  "remake": "{\n    \"superview\": {\n        \"transform_angle\": \"0\",\n        \"frame\": \"{{0,0},{491,375}}\"\n    },\n    \"subviews\": [\n        {\n            \"transform_angle\": \"-5.19\",\n            \"frame\": \"{{31,68},{170,253}}\"\n        },\n        {\n            \"transform_angle\": \"4.11\",\n            \"frame\": \"{{261,27},{206,144}}\"\n        },\n        {\n            \"transform_angle\": \"-7.84\",\n            \"frame\": \"{{271,229},{169,119}}\"\n        }\n    ]\n}",
+  "status": 1,
+  "level": {
+  "levelName": "LV2",
+  "levels": 2
+  }
+  },
+  {
+  "resourceId": 71,
+  "resourceType": 4,
+  "levels": 3,
+  "price": 0,
+  "resourceContent": 79990,
+  "smallPicId": 79977,
+  "resourceName": "四衣夹",
+  "cTime": "Aug 29, 2014 9:59:19 PM",
+  "mTime": "Aug 29, 2014 9:59:19 PM",
+  "remake": "{\n    \"superview\": {\n        \"transform_angle\": \"0\",\n        \"frame\": \"{{0,0},{640,197}}\"\n    },\n    \"subviews\": [\n        {\n            \"transform_angle\": \"0\",\n            \"frame\": \"{{32,87},{88,69}}\"\n        },\n        {\n            \"transform_angle\": \"0.86\",\n            \"frame\": \"{{171,104},{118,84}}\"\n        },\n        {\n            \"transform_angle\": \"-4.90\",\n            \"frame\": \"{{345,97},{118,73}}\"\n        },\n        {\n            \"transform_angle\": \"3.83\",\n            \"frame\": \"{{505,75},{95,82}}\"\n        }\n    ]\n}\n",
+  "status": 1,
+  "level": {
+  "levelName": "LV2",
+  "levels": 2
+  }
+  },
+  {
+  "resourceId": 82,
+  "resourceType": 4,
+  "levels": 4,
+  "price": 0,
+  "resourceContent": 79991,
+  "smallPicId": 79992,
+  "resourceName": "五衣夹",
+  "cTime": "Aug 29, 2014 9:59:48 PM",
+  "mTime": "Aug 29, 2014 9:59:48 PM",
+  "remake": "{\n    \"superview\": {\n        \"transform_angle\": \"0\",\n        \"frame\": \"{{0,0},{640,194}}\"\n    },\n    \"subviews\": [\n        {\n            \"transform_angle\": \"-5.11\",\n            \"frame\": \"{{35,28},{82,99}}\"\n        },\n        {\n            \"transform_angle\": \"-1.64\",\n            \"frame\": \"{{140,53},{117,79}}\"\n        },\n        {\n            \"transform_angle\": \"6.13\",\n            \"frame\": \"{{302,57},{82,99}}\"\n        },\n        {\n            \"transform_angle\": \"-21.66\",\n            \"frame\": \"{{395,56},{84,101}}\"\n        },\n        {\n            \"transform_angle\": \"-1.73\",\n            \"frame\": \"{{498,30},{117,79}}\"\n        }\n    ]\n}\n",
+  "status": 1,
+  "level": {
+  "levelName": "LV3",
+  "levels": 3
+  }
+  }
+  ]

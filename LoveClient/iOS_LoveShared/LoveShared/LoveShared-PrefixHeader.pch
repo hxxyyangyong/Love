@@ -1,0 +1,70 @@
+//
+//  LoveShared-PrefixHeader.pch
+//  LoveShared
+//
+//  Created by Yong on 14/12/26.
+//  Copyright (c) 2014年 loveui. All rights reserved.
+//
+
+
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import <AssetsLibrary/AssetsLibrary.h>
+#import "ExternalHeader.h"
+#import "GLEntity_Resource.h"
+//#import "UIColor-Expanded.h"
+#import "NSObject+Helper.h"
+#import "GLAsyncImageView.h"
+#import "UIButton+Help.h"
+#import "ImageUtility.h"
+#import "UIColor+Help.h"
+#import "GLBlurBackgroundView.h"
+#import "JSONKit.h"
+
+#define D_Main_Appdelegate (AppDelegate *)[UIApplication sharedApplication].delegate
+#define isIOS7                  ([[[UIDevice currentDevice]systemVersion]floatValue]>=7)
+//#import "GLBlurBackgroundView.h"
+//#import "ExternalHeader.h"
+//typedef enum e_moduletype
+//{
+//    E_ModuleType_Mood = 1,
+//    E_ModuleType_Essay = 2,
+//    E_ModuleType_Meitu = 3,
+//    E_ModuleType_Diary = 4,
+//    E_ModuleType_SmallCard = 5
+//
+//}E_ModuleType;
+typedef enum e_moduletype
+{
+    E_ModuleType_Mood = 1,
+    E_ModuleType_Eassy = 2,
+    E_ModuleType_Meitu = 3,
+    E_ModuleType_Diary = 4,
+    E_ModuleType_SmallCard = 5
+    
+}E_ModuleType;
+
+
+#define D_LocalizedCardString(s) [[NSBundle mainBundle] localizedStringForKey:s value:nil table:@"CardToolLanguage"]
+#define IOS7 [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0
+#define iOS7AddStatusHeight     (IOS7?20:0)
+
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+
+
+//#ifndef LoveShared_LoveShared_PrefixHeader_pch
+//#define LoveShared_LoveShared_PrefixHeader_pch
+//
+//// Include any system framework and library headers here that should be included in all compilation units.
+//// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+//
+//#endif
