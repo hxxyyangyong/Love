@@ -11,6 +11,10 @@
 		C11E40881A4DC5DA00235FCC /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11E40871A4DC5DA00235FCC /* AssetsLibrary.framework */; };
 		C11E408A1A4DC5E000235FCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C11E40891A4DC5E000235FCC /* Foundation.framework */; };
 		C11E408E1A4DC6B800235FCC /* DiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C11E408D1A4DC6B800235FCC /* DiaryViewController.m */; };
+		C1249B6C1A57DB080035CA94 /* SharedImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1249B6B1A57DB080035CA94 /* SharedImageViewController.m */; };
+		C1249B701A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1249B6E1A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.m */; };
+		C1249B711A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C1249B6F1A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.xib */; };
+		C1249B731A57E0390035CA94 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1249B721A57E0390035CA94 /* CoreGraphics.framework */; };
 		C155A4501A5031B8007D04A7 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C155A44E1A5031B8007D04A7 /* GuideViewController.m */; };
 		C15895041A4CFA2F00474747 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C15895031A4CFA2F00474747 /* main.m */; };
 		C15895071A4CFA2F00474747 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C15895061A4CFA2F00474747 /* AppDelegate.m */; };
@@ -148,6 +152,12 @@
 		C11E40891A4DC5E000235FCC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C11E408C1A4DC6B800235FCC /* DiaryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiaryViewController.h; sourceTree = "<group>"; };
 		C11E408D1A4DC6B800235FCC /* DiaryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiaryViewController.m; sourceTree = "<group>"; };
+		C1249B6A1A57DB080035CA94 /* SharedImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedImageViewController.h; sourceTree = "<group>"; };
+		C1249B6B1A57DB080035CA94 /* SharedImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedImageViewController.m; sourceTree = "<group>"; };
+		C1249B6D1A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLSencSuccessfulAlertViewController.h; sourceTree = "<group>"; };
+		C1249B6E1A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLSencSuccessfulAlertViewController.m; sourceTree = "<group>"; };
+		C1249B6F1A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GLSencSuccessfulAlertViewController.xib; sourceTree = "<group>"; };
+		C1249B721A57E0390035CA94 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C155A44D1A5031B8007D04A7 /* GuideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideViewController.h; sourceTree = "<group>"; };
 		C155A44E1A5031B8007D04A7 /* GuideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideViewController.m; sourceTree = "<group>"; };
 		C15894FE1A4CFA2F00474747 /* LoveShared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoveShared.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -355,6 +365,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1249B731A57E0390035CA94 /* CoreGraphics.framework in Frameworks */,
 				C11E408A1A4DC5E000235FCC /* Foundation.framework in Frameworks */,
 				C11E40881A4DC5DA00235FCC /* AssetsLibrary.framework in Frameworks */,
 				C11E40861A4DC5CF00235FCC /* UIKit.framework in Frameworks */,
@@ -380,9 +391,22 @@
 			path = Diary;
 			sourceTree = "<group>";
 		};
+		C1249B691A57DB080035CA94 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C1249B6A1A57DB080035CA94 /* SharedImageViewController.h */,
+				C1249B6B1A57DB080035CA94 /* SharedImageViewController.m */,
+				C1249B6D1A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.h */,
+				C1249B6E1A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.m */,
+				C1249B6F1A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.xib */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		C15894F51A4CFA2F00474747 = {
 			isa = PBXGroup;
 			children = (
+				C1249B721A57E0390035CA94 /* CoreGraphics.framework */,
 				C11E40891A4DC5E000235FCC /* Foundation.framework */,
 				C11E40871A4DC5DA00235FCC /* AssetsLibrary.framework */,
 				C11E40851A4DC5CF00235FCC /* UIKit.framework */,
@@ -512,6 +536,7 @@
 		C158953C1A4D398400474747 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C1249B691A57DB080035CA94 /* Shared */,
 				C1F304441A4FB9BB0052AB4C /* Common */,
 				C1F3044B1A4FB9BB0052AB4C /* Meitu */,
 				C1F3044C1A4FB9BB0052AB4C /* Mood */,
@@ -916,6 +941,7 @@
 				C15895361A4CFD7100474747 /* WawaSC-Regular.otf in Resources */,
 				C1B00CD01A4FFFF300A21EF3 /* number_two_style_1.plist in Resources */,
 				C1B00CCC1A4FFFF300A21EF3 /* number_three_style_3.plist in Resources */,
+				C1249B711A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.xib in Resources */,
 				C1B00CC71A4FFFF300A21EF3 /* number_four_style_4.plist in Resources */,
 				C19234231A528C3E00CF13E5 /* Poster.geojson in Resources */,
 				C1B00CCD1A4FFFF300A21EF3 /* number_three_style_4.plist in Resources */,
@@ -968,6 +994,7 @@
 				C192341A1A52896100CF13E5 /* GLMeitoPosterSelectViewController.m in Sources */,
 				C1F304591A4FB9FE0052AB4C /* HPTextViewInternal.m in Sources */,
 				C1B00C661A4FC98500A21EF3 /* CardCreateMoodViewController.m in Sources */,
+				C1249B6C1A57DB080035CA94 /* SharedImageViewController.m in Sources */,
 				C1D054791A52C82C00C3D065 /* GuideView.m in Sources */,
 				C1B00C9D1A4FFCB700A21EF3 /* ImageAddPreView.m in Sources */,
 				C1F304741A4FBB760052AB4C /* CardTextView.m in Sources */,
@@ -993,6 +1020,7 @@
 				C1F3049F1A4FBC6B0052AB4C /* KZColorPickerBrightnessSlider.m in Sources */,
 				C19234441A529AF500CF13E5 /* GLMeitoBorderSelectCell.m in Sources */,
 				C1B00C9E1A4FFCB700A21EF3 /* ImageEditView.m in Sources */,
+				C1249B701A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.m in Sources */,
 				C1F3046D1A4FBB3E0052AB4C /* GLSpecialEfficacyInfo.m in Sources */,
 				C1F304B41A4FBDB30052AB4C /* UIImage+StackBlur.m in Sources */,
 				C19234461A529AF500CF13E5 /* GLMeitoBorderSelectViewController.m in Sources */,

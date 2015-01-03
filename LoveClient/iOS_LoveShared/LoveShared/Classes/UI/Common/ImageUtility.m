@@ -5,9 +5,10 @@
 //  Created by yangyong on 14-5-26.
 //  Copyright (c) 2014年 gainline. All rights reserved.
 //
-
+#import <CoreGraphics/CoreGraphics.h>
 #import "ImageUtility.h"
 #import "UIBezierPath-Points.h"
+#import <UIKit/UIKit.h>
 @implementation ImageUtility
 
 + (void)setStyleBundleName:(NSString *)bundleName
@@ -132,7 +133,7 @@
         UIGraphicsBeginImageContext(contentView.frame.size);
     }
     
-//    [contentView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    [contentView.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 //    static int index = 0;

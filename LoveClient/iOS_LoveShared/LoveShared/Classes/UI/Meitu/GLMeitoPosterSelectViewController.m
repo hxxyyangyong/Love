@@ -271,7 +271,6 @@
         
         cell.delegateCell = self;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.backgroundColor  = [UIColor redColor];
         return cell;
         
     }

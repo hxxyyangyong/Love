@@ -9,6 +9,7 @@
 #import "MeituEditStyleViewController.h"
 #import "GLMeitoPosterSelectViewController.h"
 #import "GLMeitoBorderSelectViewController.h"
+#import "SharedImageViewController.h"
 #import "AppDelegate.h"
 @interface MeituEditStyleViewController ()<GLMeitoPosterSelectViewControllerDelegate,GLMeitoBorderSelectViewControllerDelegate,GLMeituContentViewDelegate,GLMeituFreeContentViewDelegate>
 //@interface MeituEditStyleViewController ()<GLMeituContentViewDelegate,GLMeituFreeContentViewDelegate>
@@ -394,7 +395,7 @@
         
         GLMeitoPosterSelectViewController *posterVC = [[GLMeitoPosterSelectViewController alloc] init];
         posterVC.delegateSelectPet = self;
-        posterVC.blurImage = [ImageUtility cutImageWithView:self.view];
+//        posterVC.blurImage = [ImageUtility cutImageWithView:self.view];
         [self presentViewController:posterVC animated:YES completion:^{
         }];
         
@@ -402,7 +403,7 @@
         
         GLMeitoBorderSelectViewController *posterVC = [[GLMeitoBorderSelectViewController alloc] init];
         posterVC.delegateSelectPet = self;
-        posterVC.blurImage = [ImageUtility cutImageWithView:self.view];
+//        posterVC.blurImage = [ImageUtility cutImageWithView:self.view];
         [self presentViewController:posterVC animated:YES completion:^{
         }];
     }
@@ -812,25 +813,24 @@
 
 - (void)preViewBtnAction:(id)sender
 {
-//    SharedImageViewController *sharedVC = [[SharedImageViewController alloc] init];
-//    switch (self.selectControlButton.tag) {
-//        case 1:
-//            sharedVC.image = [ImageUtility cutImageWithView:self.meituContentView];
-//            break;
-//        case 2:
-//            [self.freeView hiddenAllEditControls];
-//            sharedVC.image = [ImageUtility cutImageWithView:self.freeView];
-//            break;
-//        case 3:
-//            sharedVC.image = [ImageUtility captureScrollView:self.spliceView];
-//            break;
-//            
-//        default:
-//            break;
-//    }
-//    
-//    sharedVC.type = E_ModuleType_Meitu;
-//    [self.navigationController pushViewController:sharedVC animated:YES];
+    SharedImageViewController *sharedVC = [[SharedImageViewController alloc] init];
+    switch (self.selectControlButton.tag) {
+        case 1:
+            sharedVC.image = [ImageUtility cutImageWithView:self.meituContentView];
+            break;
+        case 2:
+            [self.freeView hiddenAllEditControls];
+            sharedVC.image = [ImageUtility cutImageWithView:self.freeView];
+            break;
+        case 3:
+            sharedVC.image = [ImageUtility captureScrollView:self.spliceView];
+            break;
+            
+        default:
+            break;
+    }
+    sharedVC.type = E_ModuleType_Meitu;
+    [self.navigationController pushViewController:sharedVC animated:YES];
 }
 
 
