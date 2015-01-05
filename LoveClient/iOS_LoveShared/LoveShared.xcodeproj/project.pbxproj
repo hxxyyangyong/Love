@@ -26,6 +26,12 @@
 		C15895361A4CFD7100474747 /* WawaSC-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C15895351A4CFD7100474747 /* WawaSC-Regular.otf */; };
 		C15895401A4D398400474747 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C158953E1A4D398400474747 /* HomeViewController.m */; };
 		C15895411A4D398400474747 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C158953F1A4D398400474747 /* HomeViewController.xib */; };
+		C179AC6E1A5AC655002709AC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C179AC6A1A5AC655002709AC /* libWeChatSDK.a */; };
+		C179AC6F1A5AC655002709AC /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = C179AC6B1A5AC655002709AC /* read_me.txt */; };
+		C179AC711A5AC663002709AC /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C179AC701A5AC663002709AC /* libc++.dylib */; };
+		C179AC731A5AC66C002709AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C179AC721A5AC66C002709AC /* SystemConfiguration.framework */; };
+		C179AC751A5AC680002709AC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C179AC741A5AC680002709AC /* libz.dylib */; };
+		C179AC771A5AC684002709AC /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C179AC761A5AC684002709AC /* libsqlite3.0.dylib */; };
 		C192340F1A523D9000CF13E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C19234111A523D9000CF13E5 /* InfoPlist.strings */; };
 		C19234141A523E7B00CF13E5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C19234131A523E7B00CF13E5 /* Info.plist */; };
 		C19234171A5255DD00CF13E5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C19234161A5255DD00CF13E5 /* TestViewController.m */; };
@@ -180,6 +186,14 @@
 		C158953D1A4D398400474747 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C158953E1A4D398400474747 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		C158953F1A4D398400474747 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		C179AC6A1A5AC655002709AC /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		C179AC6B1A5AC655002709AC /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
+		C179AC6C1A5AC655002709AC /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		C179AC6D1A5AC655002709AC /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		C179AC701A5AC663002709AC /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		C179AC721A5AC66C002709AC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C179AC741A5AC680002709AC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C179AC761A5AC684002709AC /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		C19234101A523D9000CF13E5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		C19234121A523D9100CF13E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C19234131A523E7B00CF13E5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -365,10 +379,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C179AC771A5AC684002709AC /* libsqlite3.0.dylib in Frameworks */,
+				C179AC751A5AC680002709AC /* libz.dylib in Frameworks */,
+				C179AC731A5AC66C002709AC /* SystemConfiguration.framework in Frameworks */,
+				C179AC711A5AC663002709AC /* libc++.dylib in Frameworks */,
 				C1249B731A57E0390035CA94 /* CoreGraphics.framework in Frameworks */,
 				C11E408A1A4DC5E000235FCC /* Foundation.framework in Frameworks */,
 				C11E40881A4DC5DA00235FCC /* AssetsLibrary.framework in Frameworks */,
 				C11E40861A4DC5CF00235FCC /* UIKit.framework in Frameworks */,
+				C179AC6E1A5AC655002709AC /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +425,10 @@
 		C15894F51A4CFA2F00474747 = {
 			isa = PBXGroup;
 			children = (
+				C179AC761A5AC684002709AC /* libsqlite3.0.dylib */,
+				C179AC741A5AC680002709AC /* libz.dylib */,
+				C179AC721A5AC66C002709AC /* SystemConfiguration.framework */,
+				C179AC701A5AC663002709AC /* libc++.dylib */,
 				C1249B721A57E0390035CA94 /* CoreGraphics.framework */,
 				C11E40891A4DC5E000235FCC /* Foundation.framework */,
 				C11E40871A4DC5DA00235FCC /* AssetsLibrary.framework */,
@@ -428,6 +451,7 @@
 		C15895001A4CFA2F00474747 /* LoveShared */ = {
 			isa = PBXGroup;
 			children = (
+				C179AC691A5AC655002709AC /* WeChatSDK_1.5 */,
 				C15895331A4CFD7100474747 /* Resources */,
 				C15895271A4CFBAF00474747 /* Classes */,
 				C15895051A4CFA2F00474747 /* AppDelegate.h */,
@@ -554,6 +578,17 @@
 				C1D0547A1A52C85D00C3D065 /* GuideAnimationView.xib */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		C179AC691A5AC655002709AC /* WeChatSDK_1.5 */ = {
+			isa = PBXGroup;
+			children = (
+				C179AC6A1A5AC655002709AC /* libWeChatSDK.a */,
+				C179AC6B1A5AC655002709AC /* read_me.txt */,
+				C179AC6C1A5AC655002709AC /* WXApi.h */,
+				C179AC6D1A5AC655002709AC /* WXApiObject.h */,
+			);
+			path = WeChatSDK_1.5;
 			sourceTree = "<group>";
 		};
 		C19234211A528C2200CF13E5 /* ViewJsonData */ = {
@@ -878,6 +913,7 @@
 				TargetAttributes = {
 					C15894FD1A4CFA2F00474747 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 3EN5XDLD3M;
 					};
 					C15895161A4CFA2F00474747 = {
 						CreatedOnToolsVersion = 6.1;
@@ -944,6 +980,7 @@
 				C1249B711A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.xib in Resources */,
 				C1B00CC71A4FFFF300A21EF3 /* number_four_style_4.plist in Resources */,
 				C19234231A528C3E00CF13E5 /* Poster.geojson in Resources */,
+				C179AC6F1A5AC655002709AC /* read_me.txt in Resources */,
 				C1B00CCD1A4FFFF300A21EF3 /* number_three_style_4.plist in Resources */,
 				C1B00CC51A4FFFF300A21EF3 /* number_four_style_2.plist in Resources */,
 				C1B00CC61A4FFFF300A21EF3 /* number_four_style_3.plist in Resources */,
@@ -1181,7 +1218,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: yong yang (Z5PRE6JP6E)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: yong yang (Z5PRE6JP6E)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$SRCROOT/LoveShared/LoveShared-PrefixHeader.pch";
 				INFOPLIST_FILE = LoveShared/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1189,9 +1226,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LoveShared/Classes/UI/CommonUtility/CommonUI/Amr/lib",
+					"$(PROJECT_DIR)/LoveShared/WeChatSDK_1.5",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "787bfda7-d562-48a4-8ec7-2989f75f4eba";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -1199,6 +1237,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = "$SRCROOT/LoveShared/LoveShared-PrefixHeader.pch";
 				INFOPLIST_FILE = LoveShared/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1206,9 +1245,10 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LoveShared/Classes/UI/CommonUtility/CommonUI/Amr/lib",
+					"$(PROJECT_DIR)/LoveShared/WeChatSDK_1.5",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "787bfda7-d562-48a4-8ec7-2989f75f4eba";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -234,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Shared/SharedImageViewController.m"
-            timestampString = "441965901.627118"
+            timestampString = "442157442.627316"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
             landmarkName = "-uploadManyImageActionContentImage"
             landmarkType = "5">
          </BreakpointContent>
@@ -272,6 +272,22 @@
             startingLineNumber = "129"
             endingLineNumber = "129"
             landmarkName = "+cutImageWithView:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoveShared/Classes/UI/Shared/SharedImageViewController.m"
+            timestampString = "442157442.627316"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "725"
+            endingLineNumber = "725"
+            landmarkName = "-sendOverAction"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

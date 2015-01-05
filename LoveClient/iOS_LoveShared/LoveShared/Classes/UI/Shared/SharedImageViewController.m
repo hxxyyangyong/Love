@@ -97,6 +97,9 @@
 
 - (void)preViewBtnAction:(id)sender
 {
+    
+        [self sendImageContent];
+    
 //    SUIModalActionSheet *sendSelectSheet = [[SUIModalActionSheet alloc] initWithTitle:nil
 //                                                                             delegate:nil
 //                                                                    cancelButtonTitle:D_LocalizedCardString(@"Button_Cancel")
@@ -109,8 +112,8 @@
 //        self.postTo = E_PostToType_CardShowAndFriend;
     
     
-        [self sendTCardCardAction];
-        _commitButton.enabled = NO;
+//        [self sendTCardCardAction];
+//        _commitButton.enabled = NO;
 //        [sendSelectSheet removeFromSuperview];
 //    }else if(sendSelectSheet._buttonIndex == 1) {
 //        self.postTo = E_PostToType_FriendOnly;
@@ -722,14 +725,18 @@
     _commitButton.enabled = YES;
     [self.uploadResourceInfoDict removeAllObjects];
     
-    GLSencSuccessfulAlertViewController *successVC = [[GLSencSuccessfulAlertViewController alloc] initWithNibName:@"GLSencSuccessfulAlertViewController" bundle:[NSBundle mainBundle]];
-    successVC.image = self.image;
-    successVC.sharedUrl = self.sharedUrl;
-    successVC.type = self.type;
-    successVC.delegateControl = self;
-    [self presentViewController:successVC animated:YES completion:^{
-        
-    }];
+    [self sendImageContent];
+    
+    
+    
+//    GLSencSuccessfulAlertViewController *successVC = [[GLSencSuccessfulAlertViewController alloc] initWithNibName:@"GLSencSuccessfulAlertViewController" bundle:[NSBundle mainBundle]];
+//    successVC.image = self.image;
+//    successVC.sharedUrl = self.sharedUrl;
+//    successVC.type = self.type;
+//    successVC.delegateControl = self;
+//    [self presentViewController:successVC animated:YES completion:^{
+//        
+//    }];
     
 //    [GLDataCenter sharedInstance].myBaseUserInfo.tcardNum += 1;
 //    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFY_FETCH_MYUSERINFO object:nil];
@@ -737,6 +744,29 @@
 
 //    successVC = nil;
 }
+
+
+- (void) sendImageContent
+{
+    WXMediaMessage *message = [WXMediaMessage message];
+    [message setThumbImage:[UIImage imageNamed:@"AppIcon.png"]];
+    
+    WXImageObject *ext = [WXImageObject object];
+    
+    ext.imageData = UIImagePNGRepresentation(self.image);
+    
+    //    UIImage* image = [UIImage imageNamed:@"res5thumb.png"];
+    //    ext.imageData = UIImagePNGRepresentation(image);
+    
+    message.mediaObject = ext;
+    
+    SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.message = message;
+    req.scene = WXSceneSession;
+    [WXApi sendReq:req];
+}
+
 
 //发玩tuo卡之后生成的card的对象
 - (void)cardEntityWithCardId:(long long)cardId  cardImageId:(long long)imageId

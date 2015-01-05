@@ -15,6 +15,7 @@
 //#import "GLEntity_ShareInfo.h"
 //#import "GLUtil_BlogShare.h"
 //#import "GLSencSuccessfulAlertViewController.h"
+#import "WXApi.h"
 
 
 @interface SharedImageViewController : UIViewController<UIActionSheetDelegate>
