@@ -368,57 +368,6 @@
     UIImageWriteToSavedPhotosAlbum(self.image, self, @selector(imageSavedToPhotosAlbum: didFinishSavingWithError: contextInfo:), nil);
 }
 
-#pragma mark
-#pragma mark 再做一张
-
-- (void)againCreate
-{
-    for (UIViewController *vc in self.navigationController.viewControllers)
-    {
-        if ([vc class] == [ZYQAssetGroupViewController class]) {
-            [vc.navigationController popToRootViewControllerAnimated:NO];
-            [vc.parentViewController dismissViewControllerAnimated:NO completion:^{
-            }];
-            return;
-        }else if([vc class] == [HomeViewController class]){
-            [self.navigationController popToViewController:vc animated:YES];
-        }
-    }
-}
-
-#pragma mark
-#pragma mark 去卡秀看看
-
-- (void)gotoCardShow
-{
-    
-    for (UIViewController *vc in self.navigationController.viewControllers)
-    {
-        if ([vc class] == [ZYQAssetGroupViewController class]) {
-            [vc.navigationController popToRootViewControllerAnimated:NO];
-            [vc.parentViewController dismissViewControllerAnimated:NO completion:^{
-            }];
-            return;
-        }else if([vc class] == [HomeViewController class]){
-            [self.navigationController popToViewController:vc animated:YES];
-        }
-    }
-    
-//    for (UIViewController *vc in self.navigationController.viewControllers)
-//    {
-//        if ([vc class] == [ZYQAssetGroupViewController class]) {
-//            [vc.navigationController popViewControllerAnimated:NO];
-//            [vc.parentViewController dismissViewControllerAnimated:NO completion:^{
-//                ZYQAssetPickerController *tempVC = (ZYQAssetPickerController *)vc.parentViewController;
-//                [tempVC.vc.navigationController popViewControllerAnimated:NO];
-//            }];
-//            return;
-//        }
-//    }
-//    [self.navigationController popToRootViewControllerAnimated:YES];
-}
-
-
 #pragma mark - savePhotoAlbumDelegate
 - (void)imageSavedToPhotosAlbum:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *) contextInfo {
     

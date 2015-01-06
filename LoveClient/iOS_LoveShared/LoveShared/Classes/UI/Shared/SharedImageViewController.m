@@ -879,20 +879,39 @@
 
 - (void)gotoCardShow
 {
-     NSArray *array = self.navigationController.viewControllers;
+    
+    NSArray *array = self.navigationController.viewControllers;
+    
     for (UIViewController *vc in array)
     {
         if ([vc class] == [ZYQAssetGroupViewController class]) {
-            [vc.navigationController popViewControllerAnimated:NO];
+            [vc.navigationController popToRootViewControllerAnimated:NO];
             [vc.parentViewController dismissViewControllerAnimated:NO completion:^{
-                ZYQAssetPickerController *tempVC = (ZYQAssetPickerController *)vc.parentViewController;
-                [tempVC.vc.navigationController popViewControllerAnimated:NO];
             }];
+            return;
+        }else if([vc class] == [HomeViewController class]){
+            [self.navigationController popToViewController:vc animated:YES];
         }else{
-            [self.navigationController popViewControllerAnimated:NO];
+            [self.navigationController popViewControllerAnimated:YES];
+            
         }
     }
+    
+//     NSArray *array = self.navigationController.viewControllers;
+//    for (UIViewController *vc in array)
+//    {
+//        if ([vc class] == [ZYQAssetGroupViewController class]) {
+//            [vc.navigationController popViewControllerAnimated:NO];
+//            [vc.parentViewController dismissViewControllerAnimated:NO completion:^{
+//                ZYQAssetPickerController *tempVC = (ZYQAssetPickerController *)vc.parentViewController;
+//                [tempVC.vc.navigationController popViewControllerAnimated:NO];
+//            }];
+//        }else{
+//            [self.navigationController popViewControllerAnimated:NO];
+//        }
+//    }
 //    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 

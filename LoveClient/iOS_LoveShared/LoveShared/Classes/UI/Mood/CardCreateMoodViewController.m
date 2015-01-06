@@ -7,6 +7,7 @@
 //
 
 #import "CardCreateMoodViewController.h"
+#import "SharedImageViewController.h"
 //#define IOS7 [[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0
 #define D_MoodBackGroundImage_Height     225
 //#import "GLBaseSelectBackgroundViewController.h"
@@ -211,10 +212,9 @@
         [self.contentTextView setHidden:YES];
     }
     [self.contentView setContentOffset:CGPointMake(0, 0)];
-//    SharedImageViewController *sharedVC = [[SharedImageViewController alloc] init];
-//    sharedVC.type = E_ModuleType_Mood;
-//    sharedVC.image = [ImageUtility cutImageWithView:self.contentView];
-//    [self.navigationController pushViewController:sharedVC animated:YES];
+    SharedImageViewController *sharedVC = [[SharedImageViewController alloc] init];
+    sharedVC.image = [ImageUtility cutImageWithView:self.contentView];
+    [self.navigationController pushViewController:sharedVC animated:YES];
 }
 
 
