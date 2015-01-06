@@ -888,10 +888,11 @@
                 ZYQAssetPickerController *tempVC = (ZYQAssetPickerController *)vc.parentViewController;
                 [tempVC.vc.navigationController popViewControllerAnimated:NO];
             }];
-            return;
+        }else{
+            [self.navigationController popViewControllerAnimated:NO];
         }
     }
-    [self.navigationController popToRootViewControllerAnimated:YES];
+//    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 

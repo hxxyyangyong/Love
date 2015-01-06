@@ -39,7 +39,7 @@
         self.extendedLayoutIncludesOpaqueBars = NO;
         self.edgesForExtendedLayout = UIRectEdgeLeft | UIRectEdgeRight | UIRectEdgeBottom;
     }
-//    //self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_select_resource"]];
     _backgroundImageView = [[GLBlurBackgroundView alloc] initWithFrame:self.view.bounds];//_baseboardTableView.frame
     [_backgroundImageView setBackgroundImage:_blurImage gray:YES];
     [self.view addSubview:_backgroundImageView];
@@ -65,6 +65,13 @@
          [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
     }
 }
+
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 
 
 - (void)viewDidAppear:(BOOL)animated

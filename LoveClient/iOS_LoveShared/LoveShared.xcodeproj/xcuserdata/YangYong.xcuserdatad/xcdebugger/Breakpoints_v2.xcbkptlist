@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Meitu/GLMeitoPosterSelectViewController.m"
-            timestampString = "441621561.797361"
+            timestampString = "442224432.844324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "-initWithData"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Meitu/GLMeitoPosterSelectViewController.m"
-            timestampString = "441619442.123202"
+            timestampString = "442224432.844324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-initWithData"
             landmarkType = "5">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Meitu/GLMeitoPosterSelectViewController.m"
-            timestampString = "441619442.123202"
+            timestampString = "442224432.844324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "-initWithData"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Meitu/GLMeitoPosterSelectViewController.m"
-            timestampString = "441621561.797361"
+            timestampString = "442224432.844324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "232"
-            endingLineNumber = "232"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Meitu/GLMeitoPosterSelectViewController.m"
-            timestampString = "441621982.358935"
+            timestampString = "442224432.844324"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "-didSelectPosterWith:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Meitu/MeituEditStyleViewController.m"
-            timestampString = "441965901.627118"
+            timestampString = "442226078.034799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "461"
-            endingLineNumber = "461"
+            startingLineNumber = "462"
+            endingLineNumber = "462"
             landmarkName = "-didSelectedWithPoster:isEmpty:"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Meitu/MeituEditStyleViewController.m"
-            timestampString = "441965901.627118"
+            timestampString = "442226078.034799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "470"
-            endingLineNumber = "470"
+            startingLineNumber = "471"
+            endingLineNumber = "471"
             landmarkName = "-didSelectedWithPoster:isEmpty:"
             landmarkType = "5">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Meitu/MeituEditStyleViewController.m"
-            timestampString = "441965901.627118"
+            timestampString = "442226078.034799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "468"
-            endingLineNumber = "468"
+            startingLineNumber = "469"
+            endingLineNumber = "469"
             landmarkName = "-didSelectedWithPoster:isEmpty:"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Meitu/GLMeitoBorderSelectViewController.m"
-            timestampString = "441621892.55399"
+            timestampString = "442224465.701458"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "300"
-            endingLineNumber = "300"
+            startingLineNumber = "307"
+            endingLineNumber = "307"
             landmarkName = "-didSelectBorderWith:"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Meitu/MeituEditStyleViewController.m"
-            timestampString = "441965965.440957"
+            timestampString = "442226078.034799"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "817"
-            endingLineNumber = "817"
+            startingLineNumber = "818"
+            endingLineNumber = "818"
             landmarkName = "-preViewBtnAction:"
             landmarkType = "5">
          </BreakpointContent>
@@ -346,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Shared/GLSencSuccessfulAlertViewController.m"
-            timestampString = "442219938.830118"
+            timestampString = "442225389.112745"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "-gotoCardShowAction:"
             landmarkType = "5">
             <Locations>
@@ -361,12 +361,12 @@
                   symbolName = "-[GLSencSuccessfulAlertViewController gotoCardShowAction:]"
                   moduleName = "LoveShared"
                   urlString = "file:///Users/YangYong/Love/LoveClient/iOS_LoveShared/LoveShared/Classes/UI/Shared/GLSencSuccessfulAlertViewController.m"
-                  timestampString = "442221918.014905"
+                  timestampString = "442230017.942789"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "200"
-                  endingLineNumber = "200"
-                  offsetFromSymbolStart = "64">
+                  startingLineNumber = "206"
+                  endingLineNumber = "206"
+                  offsetFromSymbolStart = "79">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -375,12 +375,12 @@
                   symbolName = "__58-[GLSencSuccessfulAlertViewController gotoCardShowAction:]_block_invoke"
                   moduleName = "LoveShared"
                   urlString = "file:///Users/YangYong/Love/LoveClient/iOS_LoveShared/LoveShared/Classes/UI/Shared/GLSencSuccessfulAlertViewController.m"
-                  timestampString = "442221918.015031"
+                  timestampString = "442230017.94293"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "200"
-                  endingLineNumber = "200"
-                  offsetFromSymbolStart = "12">
+                  startingLineNumber = "206"
+                  endingLineNumber = "206"
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -392,11 +392,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoveShared/Classes/UI/Shared/GLSencSuccessfulAlertViewController.m"
-            timestampString = "442219943.286437"
+            timestampString = "442225389.112745"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "-againCreateAction:"
             landmarkType = "5">
             <Locations>
@@ -407,12 +407,12 @@
                   symbolName = "-[GLSencSuccessfulAlertViewController againCreateAction:]"
                   moduleName = "LoveShared"
                   urlString = "file:///Users/YangYong/Love/LoveClient/iOS_LoveShared/LoveShared/Classes/UI/Shared/GLSencSuccessfulAlertViewController.m"
-                  timestampString = "442221918.015867"
+                  timestampString = "442230017.943742"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "193"
-                  endingLineNumber = "193"
-                  offsetFromSymbolStart = "64">
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "79">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -421,12 +421,12 @@
                   symbolName = "__57-[GLSencSuccessfulAlertViewController againCreateAction:]_block_invoke"
                   moduleName = "LoveShared"
                   urlString = "file:///Users/YangYong/Love/LoveClient/iOS_LoveShared/LoveShared/Classes/UI/Shared/GLSencSuccessfulAlertViewController.m"
-                  timestampString = "442221918.016001"
+                  timestampString = "442230017.94388"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "193"
-                  endingLineNumber = "193"
-                  offsetFromSymbolStart = "12">
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -492,6 +492,54 @@
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "-startAnimation"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoveShared/Classes/UI/Meitu/MeituEditStyleViewController.m"
+            timestampString = "442226078.034799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "397"
+            endingLineNumber = "397"
+            landmarkName = "-boardButtonAction:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoveShared/Classes/UI/GuiideAnimationView.m"
+            timestampString = "442226109.828508"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-initResource"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoveShared/Classes/UI/Shared/SharedImageViewController.m"
+            timestampString = "442226609.727229"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "883"
+            endingLineNumber = "883"
+            landmarkName = "-gotoCardShow"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

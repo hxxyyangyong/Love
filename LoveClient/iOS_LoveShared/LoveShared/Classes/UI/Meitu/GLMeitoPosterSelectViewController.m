@@ -38,7 +38,7 @@
         self.extendedLayoutIncludesOpaqueBars = NO;
         self.edgesForExtendedLayout = UIRectEdgeLeft | UIRectEdgeRight | UIRectEdgeBottom;
     }
-    //self.view.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.4];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_select_resource"]];
     _backgroundImageView = [[GLBlurBackgroundView alloc] initWithFrame:self.view.bounds];//_baseboardTableView.frame
     [_backgroundImageView setBackgroundImage:_blurImage gray:YES];
     [self.view addSubview:_backgroundImageView];
@@ -51,7 +51,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-        if (IOS7) {
+    if (IOS7) {
         [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     }
 
@@ -63,6 +63,11 @@
             if (IOS7) {
          [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
     }
+}
+
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
 }
 
 
@@ -170,7 +175,7 @@
 - (void)initControlView
 {
     _controlView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44+0)];
-    _controlView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.6];
+    _controlView.backgroundColor = [UIColor whiteColor];
     _dissMissBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
     [_dissMissBtn addTarget:self action:@selector(dissMissBtnAction:) forControlEvents:UIControlEventTouchUpInside];
     [_dissMissBtn setImage:[ImageUtility imageWithStyleName:@"makekards_turnoff_icon"] forState:UIControlStateNormal];
@@ -286,7 +291,7 @@
 ////        [GLCommonAlert showLevelNotEnoughWarningAlert];
 //    }else{
 //        if (sender.isEnable) {
-    
+            NSLog(@"童年");
             if (_delegateSelectPet &&
                 [_delegateSelectPet respondsToSelector:@selector(didSelectedWithPoster:isEmpty:)])
             {

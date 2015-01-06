@@ -8,7 +8,9 @@
 
 #import "GLSencSuccessfulAlertViewController.h"
 #import "HomeViewController.h"
-//#import "GLMainAppViewController.h"
+//#import "GLMainAppViewController.h"#Im
+#import "WXApi.h"
+#import "UIImage+Help.h"
 //@"http://a.app.qq.com/o/simple.jsp?pkgname=cn.gaialine.talkage&g_f=994783"
 #define D_SharedContent_Format  @"大家快来看看是不是真有这样的人啊，真是太有趣了！这里还能免费兑换奖品，真的是天上掉馅饼啊！"
 @interface GLSencSuccessfulAlertViewController ()
@@ -168,21 +170,25 @@
 - (IBAction)sharedToWeixinFriendAction:(id)sender
 {
     
-    [self sendToWeixin];
-    [self wechatFriendShare];
+//    [self sendToWeixin];
+//    [self wechatFriendShare];
+    [self sendImageContent:WXSceneTimeline];
 }
 
 
 - (IBAction)sharedToWeiXinAction:(id)sender {
-    
-    [self sendToWeixin];
-    [self wechatShare];
+    [self sendImageContent:WXSceneSession];
+//    [self sendToWeixin];
+//    [self wechatShare];
 }
 
 - (IBAction)sharedToSinaAction:(id)sender {
     [self sendToWeixin];
     [self weiboShare];
 }
+
+
+
 
 - (IBAction)favirateToAblmAction:(id)sender {
     
@@ -202,6 +208,53 @@
             [_delegateControl controlWithButtonIndex:5];
     }];
 }
+
+
+
+//    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFY_NewCard_MustUpdateCardList object:nil];
+
+//    successVC = nil;
+
+
+#pragma mark 分享操作
+- (void) sendImageContent:(int)wxscene
+{
+    WXMediaMessage *message = [WXMediaMessage message];
+    
+    
+    CGFloat width = 300;
+    UIImage *thumbImage = self.image;
+    while (UIImagePNGRepresentation(thumbImage).length/1024 > 40) {
+        CGSize size = thumbImage.size;
+        float maxSide = MAX(size.width, size.height);
+        if (maxSide == size.width) {
+            thumbImage = [UIImage imageWithImageSimple:thumbImage scaledToSize:CGSizeMake(width, size.height / size.width *width)];
+        }
+        else
+        {
+            thumbImage = [UIImage imageWithImageSimple:thumbImage scaledToSize:CGSizeMake(size.width / size.height *width, width)];
+        }
+        width -= 20.0f;
+    }
+    
+    [message setThumbImage:thumbImage];
+    
+    WXImageObject *ext = [WXImageObject object];
+    
+    ext.imageData = UIImagePNGRepresentation(self.image);
+    
+    //    UIImage* image = [UIImage imageNamed:@"res5thumb.png"];
+    //    ext.imageData = UIImagePNGRepresentation(image);
+    
+    message.mediaObject = ext;
+    
+    SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.message = message;
+    req.scene = wxscene;
+    [WXApi sendReq:req];
+}
+
 
 
 
@@ -342,15 +395,27 @@
     for (UIViewController *vc in self.navigationController.viewControllers)
     {
         if ([vc class] == [ZYQAssetGroupViewController class]) {
-            [vc.navigationController popViewControllerAnimated:NO];
+            [vc.navigationController popToRootViewControllerAnimated:NO];
             [vc.parentViewController dismissViewControllerAnimated:NO completion:^{
-                ZYQAssetPickerController *tempVC = (ZYQAssetPickerController *)vc.parentViewController;
-                [tempVC.vc.navigationController popViewControllerAnimated:NO];
             }];
             return;
+        }else if([vc class] == [HomeViewController class]){
+            [self.navigationController popToViewController:vc animated:YES];
         }
     }
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    
+//    for (UIViewController *vc in self.navigationController.viewControllers)
+//    {
+//        if ([vc class] == [ZYQAssetGroupViewController class]) {
+//            [vc.navigationController popViewControllerAnimated:NO];
+//            [vc.parentViewController dismissViewControllerAnimated:NO completion:^{
+//                ZYQAssetPickerController *tempVC = (ZYQAssetPickerController *)vc.parentViewController;
+//                [tempVC.vc.navigationController popViewControllerAnimated:NO];
+//            }];
+//            return;
+//        }
+//    }
+//    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 

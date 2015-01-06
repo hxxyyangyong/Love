@@ -32,8 +32,8 @@
     _lockImageView = [[UIImageView alloc] initWithFrame:self.bounds];
     //    _lockImageView.image = [UIImage imageNamed:@"lock"];
     [_lockImageView setBackgroundColor:[[UIColor colorWithHexString:@"1d1d1d"] colorWithAlphaComponent:0.4]];
-    //    [_lockImageView setHidden:YES];
-  [self addSubview:_lockImageView];
+    [_lockImageView setHidden:YES];
+    [self addSubview:_lockImageView];
     
     
     _posterNameLab = [[UILabel alloc] initWithFrame:CGRectMake(0, self.bounds.size.height - 22, self.bounds.size.width, 22)];
@@ -57,16 +57,16 @@
     [self setUserInteractionEnabled: YES];
     [self addGestureRecognizer:tapRecognizer];
     
-    _downLoadBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.frame.size.width - 24)/2.0f, (self.frame.size.height - 26)/2.0f, 24, 26)];
- [_downLoadBtn setImage:[ImageUtility imageWithStyleName:@"btn_download_icon.png"] forState:UIControlStateNormal];
-    [_downLoadBtn setImage:[ImageUtility imageWithStyleName:@"btn_download_press_icon.png"] forState:UIControlStateHighlighted];
-    [_downLoadBtn setImage:[ImageUtility imageWithStyleName:@"btn_download_press_icon.png"] forState:UIControlStateSelected];
-    [_downLoadBtn setBackgroundColor:[UIColor clearColor]];
-    [_downLoadBtn addTarget:self action:@selector(downLoadAction:) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:_downLoadBtn];
-    
+//    _downLoadBtn = [[UIButton alloc] initWithFrame:CGRectMake((self.frame.size.width - 24)/2.0f, (self.frame.size.height - 26)/2.0f, 24, 26)];
+//    [_downLoadBtn setImage:[ImageUtility imageWithStyleName:@"btn_download_icon.png"] forState:UIControlStateNormal];
+//    [_downLoadBtn setImage:[ImageUtility imageWithStyleName:@"btn_download_press_icon.png"] forState:UIControlStateHighlighted];
+//    [_downLoadBtn setImage:[ImageUtility imageWithStyleName:@"btn_download_press_icon.png"] forState:UIControlStateSelected];
+//    [_downLoadBtn setBackgroundColor:[UIColor clearColor]];
+//    [_downLoadBtn addTarget:self action:@selector(downLoadAction:) forControlEvents:UIControlEventTouchUpInside];
+//    [self addSubview:_downLoadBtn];
+//    
     self.backgroundColor = [UIColor whiteColor];
-//    self.layer.cornerRadius = 2.0f;
+    self.layer.cornerRadius = 2.0f;
     
     
 }
@@ -173,6 +173,7 @@
 
 - (void)selectBaseboardAction:(UITapGestureRecognizer *)recognizer
 {
+    NSLog(@"点击事件");
     
     if (_delegateSelect && [_delegateSelect respondsToSelector:@selector(didSelectPosterWith:)]) {
         [_delegateSelect didSelectPosterWith:self];

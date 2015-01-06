@@ -76,7 +76,7 @@
 - (void)initResource
 {
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_meitu_home"]];
     _blurImageView = [[GLBlurBackgroundView alloc] initWithFrame:self.view.bounds];
     [_blurImageView setBackgroundImage:[UIImage imageNamed:D_BlurImageName]];
     [self.view addSubview:_blurImageView];
@@ -100,6 +100,7 @@
                                                                              self.contentView.frame.size.height)];
     self.freeView.delegateEdit = self;
     [self.contentView addSubview:self.freeView];
+    self.freeView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_emptyview"]];
     
     
     self.spliceView = [[GLMeituSpliceContentView alloc] initWithFrame:CGRectMake(self.contentView.frame.size.width*2,
@@ -457,7 +458,7 @@
 
 - (void)didSelectedWithPoster:(NSDictionary *)posterDict isEmpty:(BOOL)isEmpty
 {
-    
+    NSLog(@"已经选择了");
     if (isEmpty) {
         [_meituContentView setBackgroundColor:[UIColor whiteColor] posterImage:nil];
     }else{

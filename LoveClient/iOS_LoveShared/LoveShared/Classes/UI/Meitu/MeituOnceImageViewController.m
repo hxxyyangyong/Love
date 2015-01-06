@@ -8,6 +8,7 @@
 
 #import "MeituOnceImageViewController.h"
 #import "GLMeitoPosterSelectViewController.h"
+#import "SharedImageViewController.h"
 #import "AppDelegate.h"
 @interface MeituOnceImageViewController ()
 
@@ -94,8 +95,9 @@
 
 - (void)initResource
 {
-    self.view.backgroundColor = [UIColor clearColor];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_meitu_home"]];
     _blurImageView = [[GLBlurBackgroundView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    _blurImageView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg_emptyview"]];
     [self.view addSubview:_blurImageView];
     
     _contentView =  [[UIScrollView alloc] initWithFrame:CGRectMake((self.view.frame.size.width - [self calcContentSize].width)/2.0f, (self.view.frame.size.height - 2*44-iOS7AddStatusHeight - [self calcContentSize].height)/2.0f, [self calcContentSize].width, [self calcContentSize].height)];
@@ -226,10 +228,10 @@
 
 - (void)preViewBtnAction:(id)sender
 {
-//    SharedImageViewController *sharedVC = [[SharedImageViewController alloc] init];
+    SharedImageViewController *sharedVC = [[SharedImageViewController alloc] init];
 //    sharedVC.type = E_ModuleType_Meitu;
-//    sharedVC.image = [ImageUtility cutImageWithView:self.contentView];
-//    [self.navigationController pushViewController:sharedVC animated:YES];
+    sharedVC.image = [ImageUtility cutImageWithView:self.contentView];
+    [self.navigationController pushViewController:sharedVC animated:YES];
 }
 
 - (UIImage *)captureScrollView:(UIScrollView *)scrollView{

@@ -95,7 +95,7 @@
 - (void)initResource
 {
     if (_guideView == nil) {
-        _guideView = [[GuiideAnimationView alloc] initWithFrame:self.view.bounds];
+        _guideView = [[GuiideAnimationView alloc] initWithFrame:[UIScreen mainScreen].bounds];
         [self.view addSubview:_guideView];
     }
 
