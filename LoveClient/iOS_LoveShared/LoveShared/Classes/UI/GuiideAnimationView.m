@@ -32,10 +32,10 @@
 
 - (void)initResource
 {
-    CGFloat pading = (self.frame.size.width - 70)/2.0f;
+    CGFloat pading = (self.frame.size.width - 105)/2.0f;
     _buttonArray = [NSMutableArray arrayWithCapacity:5];
     for (int i = 0; i<5; i++) {
-        OBShapedButton *tempButton = [[OBShapedButton alloc] initWithFrame:CGRectMake(50+(i/3?15:0)+pading+30*(i%3), self.frame.size.height - (50+(i/3?0:20)), 25, 40)];
+        OBShapedButton *tempButton = [[OBShapedButton alloc] initWithFrame:CGRectMake((i/3?20:0)+pading+40*(i%3), self.frame.size.height - (60+(i/3?0:20)), 25, 40)];
         tempButton.tag = i;
         [tempButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"menu_%d",i+1]] forState:UIControlStateNormal];
         [self addSubview:tempButton];
@@ -57,14 +57,15 @@
 - (void)animationStartWithTarget:(UIView *)target
                       //endCGPoint:(CGPoint)endPoint
 {
+    CGFloat toHeight = (self.frame.size.height - 20.f)/4.f - 10;
+    CGFloat toWidth = 175.f*toHeight/109.f;
     
-    CGFloat pading = (self.frame.size.width - 280)/2.0;
     [UIView animateWithDuration:1
                           delay:0.5*(target.tag+1)
                         options:UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          target.transform = CGAffineTransformScale(CGAffineTransformMakeRotation(DEGREES_TO_RADIANS(((target.tag%3)%2?1:-1)*90)), 5, 5);
-                         target.frame = CGRectMake(pading+(target.tag%2?1:0)*80, 77+87*target.tag, 200, 125);
+                         target.frame = CGRectMake(target.tag%2?(self.frame.size.width - 10 - toWidth):10,(self.frame.size.height - (toHeight*5 - 4*40))/2.0f +(toHeight-40)*target.tag, toWidth, toHeight);
                      } completion:^(BOOL finished) {
                          if (target.tag == 4) {
                                 [UIView animateWithDuration:0.5

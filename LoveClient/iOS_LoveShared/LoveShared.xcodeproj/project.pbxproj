@@ -32,6 +32,7 @@
 		C179AC731A5AC66C002709AC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C179AC721A5AC66C002709AC /* SystemConfiguration.framework */; };
 		C179AC751A5AC680002709AC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C179AC741A5AC680002709AC /* libz.dylib */; };
 		C179AC771A5AC684002709AC /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C179AC761A5AC684002709AC /* libsqlite3.0.dylib */; };
+		C180EEB31A5B741600F7ACA1 /* res1thumb.png in Resources */ = {isa = PBXBuildFile; fileRef = C180EEB21A5B741600F7ACA1 /* res1thumb.png */; };
 		C192340F1A523D9000CF13E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C19234111A523D9000CF13E5 /* InfoPlist.strings */; };
 		C19234141A523E7B00CF13E5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C19234131A523E7B00CF13E5 /* Info.plist */; };
 		C19234171A5255DD00CF13E5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C19234161A5255DD00CF13E5 /* TestViewController.m */; };
@@ -194,6 +195,7 @@
 		C179AC721A5AC66C002709AC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C179AC741A5AC680002709AC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		C179AC761A5AC684002709AC /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		C180EEB21A5B741600F7ACA1 /* res1thumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = res1thumb.png; sourceTree = "<group>"; };
 		C19234101A523D9000CF13E5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		C19234121A523D9100CF13E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C19234131A523E7B00CF13E5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 			children = (
 				C1249B6A1A57DB080035CA94 /* SharedImageViewController.h */,
 				C1249B6B1A57DB080035CA94 /* SharedImageViewController.m */,
+				C180EEB21A5B741600F7ACA1 /* res1thumb.png */,
 				C1249B6D1A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.h */,
 				C1249B6E1A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.m */,
 				C1249B6F1A57DC4E0035CA94 /* GLSencSuccessfulAlertViewController.xib */,
@@ -953,6 +956,7 @@
 				C1B00C691A4FCACE00A21EF3 /* MoodButtonStyle.plist in Resources */,
 				C1B00CCB1A4FFFF300A21EF3 /* number_three_style_2.plist in Resources */,
 				C1B00CD41A4FFFF300A21EF3 /* number_two_style_5.plist in Resources */,
+				C180EEB31A5B741600F7ACA1 /* res1thumb.png in Resources */,
 				C1D0547B1A52C85D00C3D065 /* GuideAnimationView.xib in Resources */,
 				C1B00CC21A4FFFF300A21EF3 /* number_five_style_5.plist in Resources */,
 				C1B00CCA1A4FFFF300A21EF3 /* number_three_style_1.plist in Resources */,
@@ -1171,7 +1175,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1206,7 +1210,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

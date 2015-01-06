@@ -7,6 +7,7 @@
 //
 
 #import "SharedImageViewController.h"
+#import "UIImage+Help.h"
 //#import "CardCreateSmallCardViewController.h"
 #import "HomeViewController.h"
 #import "GLSencSuccessfulAlertViewController.h"
@@ -97,9 +98,9 @@
 
 - (void)preViewBtnAction:(id)sender
 {
-    
-        [self sendImageContent];
-    
+    [self sendTCardCardAction];
+//    [self sendImageContent];
+//
 //    SUIModalActionSheet *sendSelectSheet = [[SUIModalActionSheet alloc] initWithTitle:nil
 //                                                                             delegate:nil
 //                                                                    cancelButtonTitle:D_LocalizedCardString(@"Button_Cancel")
@@ -110,8 +111,8 @@
 //    [sendSelectSheet showInView:self.view];
 //    if (sendSelectSheet._buttonIndex == 0) {
 //        self.postTo = E_PostToType_CardShowAndFriend;
-    
-    
+//    
+//    
 //        [self sendTCardCardAction];
 //        _commitButton.enabled = NO;
 //        [sendSelectSheet removeFromSuperview];
@@ -725,18 +726,18 @@
     _commitButton.enabled = YES;
     [self.uploadResourceInfoDict removeAllObjects];
     
-    [self sendImageContent];
+//    [self sendImageContent];
+//    
     
     
-    
-//    GLSencSuccessfulAlertViewController *successVC = [[GLSencSuccessfulAlertViewController alloc] initWithNibName:@"GLSencSuccessfulAlertViewController" bundle:[NSBundle mainBundle]];
-//    successVC.image = self.image;
-//    successVC.sharedUrl = self.sharedUrl;
-//    successVC.type = self.type;
-//    successVC.delegateControl = self;
-//    [self presentViewController:successVC animated:YES completion:^{
-//        
-//    }];
+    GLSencSuccessfulAlertViewController *successVC = [[GLSencSuccessfulAlertViewController alloc] initWithNibName:@"GLSencSuccessfulAlertViewController" bundle:[NSBundle mainBundle]];
+    successVC.image = self.image;
+    successVC.sharedUrl = self.sharedUrl;
+    successVC.type = self.type;
+    successVC.delegateControl = self;
+    [self presentViewController:successVC animated:YES completion:^{
+        
+    }];
     
 //    [GLDataCenter sharedInstance].myBaseUserInfo.tcardNum += 1;
 //    [[NSNotificationCenter defaultCenter] postNotificationName:NOTIFY_FETCH_MYUSERINFO object:nil];
@@ -749,8 +750,25 @@
 - (void) sendImageContent
 {
     WXMediaMessage *message = [WXMediaMessage message];
-    [message setThumbImage:[UIImage imageNamed:@"AppIcon.png"]];
     
+    
+    CGFloat width = 300;
+    UIImage *thumbImage = self.image;
+    while (UIImagePNGRepresentation(thumbImage).length/1024 > 40) {
+        CGSize size = thumbImage.size;
+        float maxSide = MAX(size.width, size.height);
+        if (maxSide == size.width) {
+            thumbImage = [UIImage imageWithImageSimple:thumbImage scaledToSize:CGSizeMake(width, size.height / size.width *width)];
+        }
+        else
+        {
+            thumbImage = [UIImage imageWithImageSimple:thumbImage scaledToSize:CGSizeMake(size.width / size.height *width, width)];
+        }
+        width -= 20.0f;
+    }
+    
+    [message setThumbImage:thumbImage];
+
     WXImageObject *ext = [WXImageObject object];
     
     ext.imageData = UIImagePNGRepresentation(self.image);
@@ -849,6 +867,9 @@
             return;
         }else if([vc class] == [HomeViewController class]){
             [self.navigationController popToViewController:vc animated:YES];
+        }else{
+            [self.navigationController popViewControllerAnimated:YES];
+        
         }
     }
 }

@@ -29,6 +29,7 @@
 
 @end
 
+
 @implementation CRNavigationController
 
 - (id)init {
@@ -47,6 +48,7 @@
         //////
         self.screenShotsList = [[NSMutableArray alloc]initWithCapacity:2];
         self.canDragBack = YES;
+        
     }
     
     return self;
@@ -59,7 +61,6 @@
 ////////////////MLNavigationController
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
         

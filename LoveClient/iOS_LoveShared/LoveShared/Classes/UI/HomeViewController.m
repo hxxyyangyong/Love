@@ -6,6 +6,7 @@
 //  Copyright (c) 2014年 loveui. All rights reserved.
 //
 
+#define D_First_Flag @"D_First_Flag"
 #import "HomeViewController.h"
 #import "AppDelegate.h"
 #import "CardCreateMoodViewController.h"
@@ -17,7 +18,7 @@
 
 @interface HomeViewController ()
 - (IBAction)controlBtn:(id)sender;
-
+@property (nonatomic, assign) BOOL      tempFlag;
 @end
 
 @implementation HomeViewController
@@ -26,15 +27,30 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES];
-    _contentButtonView.alpha = 0.0f;
-    [self performSelector:@selector(startViewAnimation) withObject:nil afterDelay:5];
-    
+    if (_tempFlag) {
+        _contentButtonView.alpha = 1.0f;
+    }else{
+        _contentButtonView.alpha = 0.0f;
+    }
+    [self performSelector:@selector(startViewAnimation) withObject:nil afterDelay:_tempFlag?0:3.5];
+    if (!_tempFlag) {
+        _tempFlag = YES;
+        [_guideView startAnimation];
+    }
 }
 
 - (void)startViewAnimation
 {
-    _contentButtonView.alpha = 1.0f;
-    
+    if (_contentButtonView.alpha == 0) {
+            [UIView animateWithDuration:0.5
+                                  delay:0 options:UIViewAnimationOptionCurveEaseInOut
+                             animations:^{
+                                 _contentButtonView.alpha = 1.0f;
+                             } completion:^(BOOL finished) {
+                                 
+                             }];
+    }
+
     for (int i = 1; i <= 5; i++) {
         UIView *btn = nil;
         switch (i) {
@@ -61,18 +77,28 @@
 
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self removeAllAnimation];
+     [self.navigationController setNavigationBarHidden:NO animated:YES];
+
+}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"爱分享";
     [self initResource];
-    [self.guideView startAnimation];
 }
 
 - (void)initResource
 {
-    _guideView = [[GuiideAnimationView alloc] initWithFrame:self.view.bounds];
-    [self.view addSubview:_guideView];
+    if (_guideView == nil) {
+        _guideView = [[GuiideAnimationView alloc] initWithFrame:self.view.bounds];
+        [self.view addSubview:_guideView];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -125,6 +151,15 @@
     rotationAnimation.repeatCount = HUGE_VALF;
     [self setAnchorPoint:CGPointMake(sender.tag%2?1:0, 0.5) forView:sender];
     [sender.layer addAnimation:rotationAnimation forKey:@"revItUpAnimation"];
+}
+
+- (void)removeAllAnimation
+{
+    [_moodView.layer removeAllAnimations];
+    [_essayView.layer removeAllAnimations];
+    [_meituView.layer removeAllAnimations];
+    [_diaryView.layer removeAllAnimations];
+    [_smallView.layer removeAllAnimations];
 }
 
 
@@ -244,9 +279,4 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-}
 @end
